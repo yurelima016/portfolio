@@ -1,0 +1,12 @@
+:root {
+  --color-primary: #FF6B00;
+  --color-secondary: #006D77;
+  --color-dark: #1E1E1E;
+  --color-dark-gray: #2B2B2B;
+  --color-gray: #4F4F4F;
+  --color-light-gray: #bfbfbf;
+  --color-white: #ffffff;
+
+  --font-title: 'Oswald', sans-serif;
+  --font-text: 'Lato', sans-serif;
+}
