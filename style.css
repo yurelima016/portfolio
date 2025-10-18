@@ -18,6 +18,7 @@
 
 html, body {
   background-color: var(--color-dark);
+  overflow-x: hidden;
 }
 
 header{
@@ -131,4 +132,57 @@ header > nav > ul > li{
 
 #orange-word{
   color: var(--color-primary);
+}
+
+#about-me{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#picture-container{
+  width: 40%;
+  height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+#picture-container > div,#picture-container > img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%,50%);
+}
+
+#shadow-circle{
+  width: 50%;
+  height: 35%;
+  border-radius: 50%;
+  background-color: var(--color-shadow);
+  z-index: -1;
+}
+
+#orange-circle{
+  width: 50%;
+  height: 35%;
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+  z-index: 1;
+}
+
+#aboutme-container{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutme-container > h1{
+  width: 100%;
+  height: auto;
+}
+
+#aboutme-container > p{
+  width: 100%;
+  height: auto;
 }
