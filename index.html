@@ -86,6 +86,14 @@
                 </div>
                 <div id="soft-skills">
                     <h3>Soft Skills</h3>
+                    <div>
+                        <p>Communication</p>
+                        <p>Time Management</p>
+                        <p>Teamwork</p>
+                        <p>Adaptability</p>
+                        <p>Continuous Learning</p>
+                        <p>Problem-Solving</p>
+                    </div>
                 </div>
             </div>
             <div id="skill-level">
@@ -97,20 +105,7 @@
         <section id="projects"></section>
         <section id="contact-me"></section>
         <footer></footer>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function(){
-                const birthDate = new Date('2004-11-16');
-                const today = new Date();
-                let age = today.getFullYear() - birthDate.getFullYear();
-                const monthDiff = today.getMonth() - birthDate.getMonth()
-
-                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                    age--;
-                }
-                document.getElementById('age').textContent = age;
-            })
-        </script>
+        
         <script src="script.js"></script>
         
     </body>
