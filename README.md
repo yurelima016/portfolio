@@ -6,7 +6,7 @@ Este é o repositório do meu portfólio pessoal, **yure.dev**. Uma landing page
 
 O site está sendo construído do zero, com foco em interfaces eficientes, responsivas e visualmente consistentes.
 
-**Visite a versão (em desenvolvimento):** `[SEU LINK AQUI]` (Ex: https://yure-lima.github.io/portfolio/)
+**Visite a versão (em desenvolvimento):** `[https://portfolio-rust-rho-rgustgd08i.vercel.app]`
 
 ---
 
