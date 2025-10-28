@@ -1,4 +1,4 @@
-# yure.dev - Portfólio Pessoal
+![Image](https://github.com/user-attachments/assets/0ec5572c-267f-4cc2-983d-5b186636c6a3)
 
 ![yure.dev](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge)
 
@@ -6,14 +6,14 @@ Este é o repositório do meu portfólio pessoal, **yure.dev**. Uma landing page
 
 O site está sendo construído do zero, com foco em interfaces eficientes, responsivas e visualmente consistentes.
 
-**Visite a versão (em desenvolvimento):** [https://yure.dev.br]
+**Visite a versão (em desenvolvimento):** https://yure.dev.br
 
 ---
 
 ## 📬 Vamos nos Conectar
 
-- **LinkedIn:** [www.linkedin.com/in/yurelima016]
-- **Email:** [yurelimasouza@gmail.com]
+- **LinkedIn:** www.linkedin.com/in/yurelima016
+- **Email:** yurelimasouza@gmail.com
 
 ---
 
