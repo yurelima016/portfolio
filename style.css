@@ -11,6 +11,7 @@
   --color-gray: #4F4F4F;
   --color-light-gray: #bfbfbf;
   --color-white: #ffffff;
+  --color-star-fill: #FFD700;
 
   --font-title: 'Oswald', sans-serif;
   --font-text: 'Lato', sans-serif;
@@ -21,7 +22,8 @@ html, body {
   overflow-x: hidden;
 }
 
-header{
+/* --- Header --- */
+.header{
   display: none;
   width: 100vw;
   height: 8vh;
@@ -30,13 +32,13 @@ header{
   z-index: 10000;
 }
 
-header > nav{
+.header__nav{
   width: 100%;
   height: 100%;
   display: flex;
 }
 
-header > nav > ul{
+.header__nav-list{
   width: 80%;
   height: 100%;
   display: flex;
@@ -45,13 +47,13 @@ header > nav > ul{
   gap: 5rem;
 }
 
-header > nav > ul > li{
+.header__nav-item{
   font-family: var(--font-text);
   font-size: 1.25rem;
   color: var(--color-primary);
 }
 
-#buttons-container{
+.header__controls{
   width: 20%;
   height: 100%;
   display: flex;
@@ -61,7 +63,7 @@ header > nav > ul > li{
   gap: 1rem;
 }
 
-#buttons-container > div{
+.header__control-btn {
   width: 20%;
   height: 80%;
   display: flex;
@@ -70,20 +72,21 @@ header > nav > ul > li{
   cursor: pointer;
 }
 
-#buttons-container > div > svg{
+.header__control-btn > svg{
   width: 50%;
   height: 50%;
   color: var(--color-primary);
 }
 
-#home{
+/* --- Home --- */
+.home {
   width: 100vw;
   height: 100vh;
   display: flex;
   box-shadow: inset 0 -5px 0 0 var(--color-primary);
 }
 
-#img-svg-container{
+.home__image-wrapper{
   width: 40%;
   height: 100%;
   display: flex;
@@ -91,7 +94,7 @@ header > nav > ul > li{
   align-items: center;
 }
 
-#home-title-container{
+.home__title-wrapper{
   width: 60%;
   height: 100%;
   display: flex;
@@ -101,7 +104,7 @@ header > nav > ul > li{
   isolation: isolate;
 }
 
-.home-title{
+.home__title{
   display: flex;
   font-family: var(--font-title);
   font-weight: 500;
@@ -110,14 +113,14 @@ header > nav > ul > li{
   line-height: 1;
   text-transform: lowercase;
 }
-.word{
+.home__title-word{
   position: relative;
   display: inline-block;
   z-index: 1;
   transform: skewX(-15deg);
 }
 
-.word::after{
+.home__title-word::after{
   content: attr(data-text);
   position: absolute;
   left: 10px;
@@ -129,16 +132,16 @@ header > nav > ul > li{
   white-space: nowrap;
 }
 
-#white-word{
+.home__title-word--white{
   color: var(--color-white);
 }
 
-#orange-word{
+.home__title-word--orange{
   color: var(--color-primary);
 }
 
-#about-me{
-  background-color: #1E1E1E;
+/* --- About --- */
+.about {
   opacity: 0.8;
   background-image:  linear-gradient(135deg, #2B2B2B 25%, transparent 25%), linear-gradient(225deg, #2B2B2B 25%, transparent 25%), linear-gradient(45deg, #2B2B2B 25%, transparent 25%), linear-gradient(315deg, #2B2B2B 25%, #1E1E1E 25%);
   background-position:  160px 0, 160px 0, 0 0, 0 0;
@@ -149,34 +152,38 @@ header > nav > ul > li{
   display: flex;
 }
 
-#picture-container{
+.about__picture-wrapper{
   width: 40%;
   height: 100%;
   position: relative;
 }
 
-.profile-elements{
+.about__picture-shadow,
+.about__picture-frame,
+.about__picture-img {
   position: absolute;
-  width: 415px;
-  height: 415px;
   border-radius: 50%;
 }
 
-#shadow-circle{
+.about__picture-shadow{
+  width: 415px;
+  height: 415px;
   top: 28%;
   left: 10%;
   background-color: var(--color-shadow);
   z-index: 1;
 }
 
-#orange-circle{
+.about__picture-frame{
+  width: 415px;
+  height: 415px;
   top: 24%;
   left: 14%;
   border: 1px solid var(--color-primary);
   z-index: 2;
 }
 
-#profile-pic{
+.about__picture-img{
   width: 400px;
   height: 400px;
   top: 25%;
@@ -184,7 +191,7 @@ header > nav > ul > li{
   z-index: 3;
 }
 
-#aboutme-container{
+.about__text-wrapper{
   width: 60%;
   height: 100%;
   display: flex;
@@ -193,7 +200,7 @@ header > nav > ul > li{
   gap: 2vh;
 }
 
-#aboutme-container > h1{
+.about__text-wrapper > h1{
   width: 100%;
   height: auto;
   font-family: var(--font-title);
@@ -202,16 +209,15 @@ header > nav > ul > li{
   font-weight: 400;
 }
 
-#aboutme-container >h1::after{
+.about__text-wrapper > h1::after{
   content: '';
   display: block;
   width: 13%;
   height: 10px;
   background-color: var(--color-primary);
-  /* margin-top: 0.5rem; */
 }
 
-#aboutme-container > p{
+.about__text-wrapper > p{
   width: 90%;
   height: auto;
   font-family: var(--font-text);
@@ -221,24 +227,25 @@ header > nav > ul > li{
   text-align: justify;
 }
 
-.highlight-letters{
+.about__highlight{
   color: var(--color-primary);
 }
 
-#knowledge-skills{
+/* --- Skills --- */
+.skills {
   width: 100vw;
   height: 100vh;
   display: flex;
 }
 
-#skills{
+.skills__list{
   width: 45%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#skills > div > h3{
+.skills__group > h3{
   width: 100%;
   height: 20%;
   font-family: var(--font-title);
@@ -247,15 +254,14 @@ header > nav > ul > li{
   padding-left: 1vw;
   display: flex;
   align-items: end;
-  /* background-color: red; */
 }
 
-#hard-skills{
+.skills__group--hard{
   width: 100%;
   height: 60%;
 }
 
-#skills-container{
+.skills__grid{
   width: 100%;
   height: 80%;
   display: flex;
@@ -264,7 +270,7 @@ header > nav > ul > li{
   align-items: center;
 }
 
-.skill-bar{
+.skills__bar{
   width: 30%;
   height: 15%;
   background-color: var(--color-dark-gray);
@@ -277,9 +283,15 @@ header > nav > ul > li{
   position: relative;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.skill-bar::before{
+.skills__bar:hover {
+    background-color: var(--color-gray);
+}
+
+.skills__bar::before{
   content: '';
   position: absolute;
   top: 0;
@@ -289,19 +301,19 @@ header > nav > ul > li{
   background-color: var(--color-gray);
   border-radius: 10px;
   z-index: -1;
-  transition: width 8s ease-in-out;
+  transition: width 7s ease-in-out;
 }
 
-.skill-bar.active::before{
+.skills__bar.active::before{
   width: 100%;
 }
 
-#soft-skills{
+.skills__group--soft{
   width: 100%;
   height: 40%;
 }
 
-#soft-skills > div{
+.skills__soft-grid{
   width: 100%;
   height: 60%;
   display: flex;
@@ -311,74 +323,91 @@ header > nav > ul > li{
   row-gap: 3%;
 }
 
-#soft-skills > div > p{
+.skills__soft-grid > p{
   width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-text);
-  font-size: 1.75vh;
   color: var(--color-white);
 }
 
-.soft-skill-tag {
-  --s: 25px; /* control the shape */
-  
-  line-height: 5; /* control the height */
+.skills__soft-tag {
+  --s: 25px;
+  line-height: 5;
   padding-inline: calc(var(--s) + .3em);
   clip-path: polygon(0 0,calc(100% - var(--s)) 0,100% 50%,calc(100% - var(--s)) 100%,0 100%,var(--s) 50%);
   background-color: var(--color-gray);
   width: fit-content;
 }
 
-#skill-level{
+.skills__display{
   width: 55%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#skill-logo{
+.skills__display-logo-wrapper{
   width: 100%;
   height: 70%;
-  background-color: forestgreen;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
-#skill-title{
+.skills__display-logo {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: end;    
+    transition: opacity 0.5s ease-in-out;
+}
+
+.skills__display-logo > img {
+    width: 90%;
+    height: 90%;
+}
+
+.skills__display-title{
   width: 100%;
   height: 10%;
-  background-color: goldenrod;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#stars{
+.skills__display-title > h1{
+  font-family: var(--font-title);
+  color: var(--color-white);
+  font-size: 5vh;
+  letter-spacing: .2rem;
+}
+
+.skills__display-stars{
   width: 100%;
-  height: 20%;
-  background-color: red;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5%;
+  gap: 3%;
 }
 
 .star { 
-  width: 10%;
-  height: 70%;
+  width: auto;
+  height: 80%;
 }
 
 .star polygon {
   fill: none;
-  stroke: #FFD700;
-  stroke-width: 2;          
+  stroke: var(--color-star-fill);
+  stroke-width: 2;        
   stroke-linejoin: round;
   stroke-linecap: round;
 }
 
-#first-star polygon{
-  fill: #FFD700;
+.star.filled polygon{
+  fill: var(--color-star-fill);
+  stroke: var(--color-star-fill);
 }
