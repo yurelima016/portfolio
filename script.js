@@ -170,3 +170,110 @@ function initializeTheme() {
 }
 
 initializeTheme();
+
+const languageBtn = document.getElementById('language-btn');
+const languageBtnText = document.getElementById('language-btn-text');
+const translatableElements = document.querySelectorAll('[data-translate]');
+
+const translations = {
+    'en': {
+        // Navigation
+        'nav_home': 'Home',
+        'nav_about': 'About Me',
+        'nav_skills': 'Skills',
+        'nav_contact': 'Contacts',
+        // About me
+        'about_title': 'About me',
+        'about_p1': 'Hi! I’m <span class="about__highlight">Yure Lima</span>, a ',
+        'about_p2': '-year-old <span class="about__highlight">front-end</span> developer focused on creating efficient, responsive, and visually consistent interfaces. I hold degrees in <span class="about__highlight">Information Technology Management</span> and <span class="about__highlight">Systems Development</span>, which provide me with a strong foundation in both programming logic and strategic technology vision. I’m constantly improving my skills and keeping up with industry trends to deliver high-performance and high-quality solutions.',
+        // Skills
+        'skills_hard_title': 'Hard Skills',
+        'skills_soft_title': 'Soft Skills',
+        'skills_soft_1': 'Communication',
+        'skills_soft_2': 'Time Management',
+        'skills_soft_3': 'Teamwork',
+        'skills_soft_4': 'Adaptability',
+        'skills_soft_5': 'Continuous Learning',
+        'skills_soft_6': 'Problem-Solving',
+        // Contact
+        'contact_title': 'Contact me',
+        'contact_name_placeholder': 'Name',
+        'contact_email_placeholder': 'Email',
+        'contact_message_placeholder': 'Message',
+        'contact_send_btn': 'Send',
+    },
+    'pt': {
+        // Navigation
+        'nav_home': 'Início',
+        'nav_about': 'Sobre Mim',
+        'nav_skills': 'Habilidades',
+        'nav_contact': 'Contatos',
+        // About me
+        'about_title': 'Sobre mim',
+        'about_p1': 'Olá! Eu sou <span class="about__highlight">Yure Lima</span>, um desenvolvedor <span class="about__highlight">front-end</span> de ',
+        'about_p2': ' anos focado em criar interfaces eficientes, responsivas e visualmente consistentes. Sou formado em <span class="about__highlight">Gestão da Tecnologia da Informação</span> e <span class="about__highlight">Desenvolvimento de Sistemas</span>, o que me proporciona uma base sólida tanto em lógica de programação quanto em visão estratégica de tecnologia. Estou constantemente aprimorando minhas habilidades e me atualizando com as tendências do setor para entregar soluções de alta performance e qualidade.',
+        // Skills
+        'skills_hard_title': 'Hard Skills',
+        'skills_soft_title': 'Soft Skills',
+        'skills_soft_1': 'Comunicação',
+        'skills_soft_2': 'Gestão de Tempo',
+        'skills_soft_3': 'Trabalho em Equipe',
+        'skills_soft_4': 'Adaptabilidade',
+        'skills_soft_5': 'Aprendizado Contínuo',
+        'skills_soft_6': 'Resolução de Problemas',
+        // Contact
+        'contact_title': 'Contato',
+        'contact_name_placeholder': 'Nome',
+        'contact_email_placeholder': 'Email',
+        'contact_message_placeholder': 'Mensagem',
+        'contact_send_btn': 'Enviar',
+    }
+};
+
+function setLanguage(lang) {
+    localStorage.setItem('lang', lang);
+
+    if (lang === 'pt') {
+        languageBtnText.textContent = 'EN';
+    } else {
+        languageBtnText.textContent = 'PT';
+    }
+
+    translatableElements.forEach(el => {
+        const key = el.dataset.translate;
+        const translation = translations[lang][key];
+
+        if (translation) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translation;
+            } else {
+                el.innerHTML = translation;
+            }
+        }
+    });
+}
+
+function toggleLanguage() {
+    const currentLang = localStorage.getItem('lang') || 'pt';
+    if (currentLang === 'pt') {
+        setLanguage('en');
+    } else {
+        setLanguage('pt');
+    }
+}
+
+function initializeLanguage() {
+    const savedLang = localStorage.getItem('lang');
+    const browserLang = navigator.language.split('-')[0];
+
+    if (savedLang) {
+        setLanguage(savedLang);
+    } else if (browserLang === 'pt') {
+        setLanguage('pt');
+    } else {
+        setLanguage('en'); // Default 
+    }
+}
+
+languageBtn.addEventListener('click', toggleLanguage);
+initializeLanguage();

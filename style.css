@@ -132,6 +132,13 @@ body[data-theme="light"] {
   color: var(--color-accent);
 }
 
+.language-btn-text{
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
 /* --- Home --- */
 .home {
   width: 100vw;
