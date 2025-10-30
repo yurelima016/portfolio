@@ -69,7 +69,6 @@ O site já conta com as seguintes seções interativas e funcionais:
 Este projeto ainda está crescendo! As próximas seções a serem implementadas são:
 
 - **[ ] Seção de Projetos:** Um carrossel ou galeria para exibir os projetos em que trabalhei.
-- **[ ] Menu de Navegação:** Ativar o menu (header) para navegação _sticky_ e _scroll suave_.
 - **[ ] Botão de Idioma:** Adicionar funcionalidade de internacionalização (PT/EN).
 - **[ ] Responsividade:** Garantir que o site seja perfeitamente visível em dispositivos móveis (tablets e celulares).
 
