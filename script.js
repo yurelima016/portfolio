@@ -277,3 +277,73 @@ function initializeLanguage() {
 
 languageBtn.addEventListener('click', toggleLanguage);
 initializeLanguage();
+
+const contactForm = document.getElementById('contact-form');
+const submitButton = document.getElementById('contact-submit-btn');
+
+const FORM_ENDPOINT = 'https://formspree.io/f/mkgpblzk';
+
+contactForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const currentLang = localStorage.getItem('lang') || 'en'; // Padrão 'en'
+    submitButton.disabled = true;
+
+    if (currentLang === 'en'){
+        submitButton.textContent = "Sending...";
+    }
+    else{
+        submitButton.textContent = "Enviando...";
+    }
+    
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+    
+    try{
+        const response = await fetch(FORM_ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok){
+            contactForm.reset();
+            if (currentLang === 'en'){
+                submitButton.textContent = "Sent!";
+            }
+            else{
+                submitButton.textContent = "Enviado!";
+            }
+        }
+        else{
+
+            if (currentLang === 'en'){
+                throw new Error('Server error');
+            }
+            else{
+                throw new Error('Erro no servidor');
+            }
+        }
+    }
+    catch (error){
+        if (currentLang === 'en'){
+                submitButton.textContent = 'Error';
+            }
+        else{
+            submitButton.textContent = 'Erro';
+        }
+    }
+    finally{
+        setTimeout(() => {
+            submitButton.disabled = false;
+            if (currentLang === 'en'){
+                submitButton.textContent = 'Send';
+            }
+            else{
+                submitButton.textContent = 'Enviar';
+            }
+        }, 3000);
+    }
+});

@@ -128,12 +128,12 @@
     </div>
     <div class="contact__form-wrapper">
         <h1 class="contact__title" data-translate="contact_title">Contact me</h1>
-        <form class="contact__form" action="https://formspree.io/f/mkgpblzk" method="POST">
+        <form class="contact__form" id="contact-form">
             <input class="contact__input" type="text" name="name" id="name" placeholder="Name" data-translate="contact_name_placeholder" required>
-            <input class="contact__input" type="text" name="email" id="email" placeholder="Email" data-translate="contact_email_placeholder" required>
+            <input class="contact__input" type="email" name="email" id="email" placeholder="Email" data-translate="contact_email_placeholder" required>
             <textarea class="contact_textarea" name="message" id="message" placeholder="Message" data-translate="contact_message_placeholder" rows="5" required></textarea>
             <div class="contact__button-group">
-                <button class="contact__button contact__button--subimit" type="submit" data-translate="contact_send_btn">Send</button>
+                <button class="contact__button contact__button--subimit" id="contact-submit-btn" type="submit" data-translate="contact_send_btn">Send</button>
                 <a href="https://www.linkedin.com/in/yurelima016" target="_blank" rel="noopener noreferrer" class="contact__button contact__button--linkedin" aria-label="Meu LinkedIn">
                     <svg viewBox="0 0 128 128">
                         <path fill-rule="evenodd" d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"></path>
