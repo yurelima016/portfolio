@@ -1,8 +1,8 @@
-![Image](https://github.com/user-attachments/assets/0ec5572c-267f-4cc2-983d-5b186636c6a3)
+![Capa do Portfólio](https://github.com/user-attachments/assets/0ec5572c-267f-4cc2-983d-5b186636c6a3)
 
-![yure.dev](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge)
+![Status do Projeto](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge)
 
-Este é o repositório do meu portfólio pessoal, **yure.dev**. Uma *single-page application* (SPA) moderna e interativa desenvolvida para apresentar minhas habilidades, projetos e minha jornada como desenvolvedor Front-End.
+Este é o repositório do meu portfólio pessoal, **yure.dev**. Uma _single-page application_ (SPA) moderna e interativa desenvolvida para apresentar minhas habilidades, projetos e minha jornada como desenvolvedor Front-End.
 
 O site foi construído do zero, com foco em interfaces eficientes, responsivas e visualmente consistentes.
 
@@ -12,24 +12,25 @@ O site foi construído do zero, com foco em interfaces eficientes, responsivas e
 
 ## 📬 Vamos nos Conectar
 
-- **LinkedIn:** www.linkedin.com/in/yurelima016
-- **Email:** yurelimasouza@gmail.com
+- **LinkedIn:** [www.linkedin.com/in/yurelima016](https://www.linkedin.com/in/yurelima016)
+- **Email:** [yurelimasouza@gmail.com](mailto:yurelimasouza@gmail.com)
 
 ---
 
 ## 🚀 Tecnologias e Metodologias
 
-Este projeto foi construído utilizando as principais tecnologias e padrões do Front-End:
+Este projeto foi construído utilizando as principais tecnologias e padrões do Front-End moderno:
 
 - **HTML5:** Para a estrutura semântica do site.
 - **CSS3:** Para toda a estilização, utilizando:
+  - **Responsividade:** Layout adaptável para desktops, tablets e celulares usando _Media Queries_.
   - **Metodologia BEM:** Nomenclatura de classes (Bloco, Elemento, Modificador) para um CSS organizado e escalável.
-  - **Flexbox** e **CSS Grid:** Para layouts complexos.
+  - **Flexbox** e **CSS Grid:** Para layouts complexos e alinhamentos precisos.
   - **Variáveis CSS (Custom Properties):** Para um tema dinâmico e fácil manutenção de cores e fontes.
-  - **`clip-path`:** Para a criação dos tags de Soft Skills.
+  - **`clip-path`:** Para a criação estilizada das tags de Soft Skills.
   - **Transições (`transition`):** Para animações suaves na troca de tema e interações.
 - **JavaScript (ES6+):** Para toda a interatividade e lógica do site.
-  - **Manipulação do DOM:** Para atualizar dinamicamente todo o conteúdo.
+  - **Manipulação do DOM:** Para atualizar dinamicamente o conteúdo, incluindo o menu mobile.
   - **API `fetch` e `async/await`:** Para comunicação assíncrona com o Formspree.
   - **`localStorage`:** Para salvar as preferências de tema (Dark/Light) e idioma (PT/EN) do usuário.
   - **`navigator.language`:** Para detectar o idioma padrão do navegador do usuário.
@@ -38,64 +39,67 @@ Este projeto foi construído utilizando as principais tecnologias e padrões do 
 
 ---
 
-## ✨ Funcionalidades Implementadas
+## ⚡ Funcionalidades Implementadas
 
 O site já conta com as seguintes seções interativas e funcionais:
 
-### 1. Sistema de Tradução (i18n)
+### 1. Design Responsivo (Mobile & Desktop)
+
+- **Adaptação Completa:** O layout se ajusta perfeitamente a diferentes tamanhos de tela.
+- **Menu Mobile:** Navegação otimizada para celulares com um menu "gaveta" (off-canvas) interativo.
+- **Layout Fluido:** Uso de unidades relativas (`%`, `vh`, `vw`, `rem`) e funções CSS modernas (`clamp()`) para tipografia e espaçamentos dinâmicos.
+
+### 2. Sistema de Tradução (i18n)
 
 - **Internacionalização Completa:** O site alterna dinamicamente entre **Português (PT)** e **Inglês (EN)**.
-- **Detecção Automática:** Identifica o idioma do navegador (`navigator.language`) na primeira visita.
-- **Persistência de Dados:** A preferência de idioma é salva no `localStorage` do usuário.
-- **Atualização Sem Recarregar:** O conteúdo é traduzido instantaneamente, incluindo `placeholders` de formulários e texto de botões.
+- **Detecção Automática:** Identifica o idioma do navegador na primeira visita.
+- **Persistência de Dados:** A preferência de idioma é salva no `localStorage`.
+- **Atualização Sem Recarregar:** Tradução instantânea de textos, `placeholders` e botões.
 
-### 2. Tema Dinâmico (Dark/Light)
+### 3. Tema Dinâmico (Dark/Light)
 
-- **Implementação Completa:** Lógica para alternar entre os temas claro e escuro.
-- **Detecção Automática:** Verifica a preferência do sistema (`prefers-color-scheme`) na primeira visita.
-- **Ícone Dinâmico:** O ícone de sol/lua é alterado via JavaScript.
-- **Salvo no Navegador:** A preferência de tema do usuário é salva usando `localStorage`.
-- **CSS Otimizado:** Utiliza `data-theme` no `<body>` para redefinir variáveis CSS, garantindo uma troca de tema limpa e com transições suaves.
+- **Alternância de Temas:** Lógica completa para troca entre claro e escuro.
+- **Detecção de Preferência:** Verifica a configuração do sistema operacional (`prefers-color-scheme`).
+- **Persistência:** Salva a escolha do usuário no navegador.
+- **Ícone Dinâmico:** O botão de tema alterna entre sol e lua.
 
-### 3. Seção "Skills"
+### 4. Seção "Skills" Interativa
 
-- **Animação Dinâmica:** Uma exibição interativa das minhas _Hard Skills_.
-- **Carrossel Automático:** As skills são exibidas (`setTimeout`) uma após a outra, preenchendo uma barra de progresso.
-- **Conteúdo Dinâmico:** O logo da tecnologia, o título e o nível (estrelas) são atualizados dinamicamente via JavaScript.
-- **Controle do Usuário:** O usuário pode clicar em qualquer skill para "pular" a animação e ver os detalhes imediatamente.
-- **Soft Skills:** Exibição das minhas habilidades interpessoais.
+- **Animação Automática:** Carrossel que percorre as _Hard Skills_ com barras de progresso.
+- **Conteúdo Dinâmico:** Atualização em tempo real de logos, títulos e nível de habilidade (estrelas).
+- **Interação do Usuário:** Clique para selecionar e visualizar detalhes de uma skill específica imediatamente.
 
-### 4. Seção de Contato
+### 5. Formulário de Contato Funcional
 
-- **Formulário Assíncrono:** Um formulário de contato funcional que envia mensagens via **Formspree**.
-- **Envio sem Recarregar:** Utiliza `fetch` e `event.preventDefault()` para enviar os dados em segundo plano, sem recarregar a página.
-- **Feedback Visual:** O botão de envio atualiza seu texto para "Enviando...", "Enviado!" ou "Erro", respeitando o idioma selecionado.
-- **Links Diretos:** Botões de atalho para LinkedIn e GitHub.
+- **Envio Assíncrono:** Utiliza `fetch` para enviar mensagens via **Formspree** sem recarregar a página.
+- **Feedback Visual:** Botão de envio com estados de "Enviando...", "Sucesso" ou "Erro", traduzidos automaticamente.
 
-### 5. Seção "About Me"
+### 6. Seção "About Me"
 
-- **Cálculo de Idade:** A minha idade é calculada e exibida automaticamente em tempo real usando JavaScript.
+- **Idade Dinâmica:** Cálculo automático da idade com base na data de nascimento.
 
 ---
 
 ## 🚧 Próximos Passos (Roadmap)
 
-Este projeto ainda está crescendo! As próximas seções a serem implementadas são:
+Este projeto continua evoluindo! As próximas funcionalidades planejadas são:
 
-- **[ ] Seção de Projetos:** Preencher a seção (`id="projects"`) com um carrossel ou galeria para exibir os projetos em que trabalhei.
-- **[ ] Responsividade:** Garantir que o site seja perfeitamente visível em dispositivos móveis (tablets e celulares).
+- **[ ] Seção de Projetos:** Implementação de uma galeria ou carrossel na seção `#projects` para exibir trabalhos realizados.
+- **[ ] Melhorias de Acessibilidade (a11y):** Refinamento da navegação por teclado e leitores de tela.
+- **[ ] Testes de Performance:** Otimização do carregamento de imagens e scripts.
 
 ---
 
 ## 🛠️ Como rodar o projeto localmente
 
-Você pode clonar este repositório e abrir o `index.html` diretamente no seu navegador.
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/yurelima016/portfolio.git](https://github.com/yurelima016/portfolio.git)
+   ```
+2. Acesse o diretório do projeto:
 
-```bash
-# Clone o repositório
-git clone [https://github.com/yurelima016/portfolio.git](https://github.com/yurelima016/portfolio.git)
+   ```bash
+   cd portfolio
+   ```
 
-# Acesse o diretório
-cd portfolio
-
-# Abra o index.html no seu navegador
+3. Abra o arquivo index.html diretamente no seu navegador de preferência.
