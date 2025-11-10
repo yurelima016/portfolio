@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/jogo-da-velha/:match*",
+      "destination": "https://jogo-da-velha.vercel.app/:match*"
+    }
+  ]
+}
