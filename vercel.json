@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/jogo-da-velha",
+      "destination": "https://yure016-jogo-da-velha.vercel.app/index.html"
+    },
+    {
+      "source": "/jogo-da-velha/",
+      "destination": "https://yure016-jogo-da-velha.vercel.app/index.html"
+    },
+    {
       "source": "/jogo-da-velha/:match*",
       "destination": "https://yure016-jogo-da-velha.vercel.app/:match*"
     }
