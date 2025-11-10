@@ -1,12 +1,15 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/jogo-da-velha",
-      "destination": "https://yure016-jogo-da-velha.vercel.app/index.html"
-    },
+      "destination": "/jogo-da-velha/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
     {
       "source": "/jogo-da-velha/",
-      "destination": "https://yure016-jogo-da-velha.vercel.app/index.html"
+      "destination": "https://yure016-jogo-da-velha.vercel.app/"
     },
     {
       "source": "/jogo-da-velha/:match*",
