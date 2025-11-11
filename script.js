@@ -203,6 +203,13 @@ const translations = {
     skills_soft_4: "Adaptability",
     skills_soft_5: "Continuous Learning",
     skills_soft_6: "Problem-Solving",
+
+    // Projects
+    projects_title: "Projects",
+    projects_game_title: "Tic Tac Toe",
+    projects_game_desc:
+      "A classic Tic-Tac-Toe game built with pure HTML, CSS, and JavaScript. Focused on responsive design, fluid CSS animations (such as a turn indicator with timing), and DOM manipulation for a clean and modern user experience.",
+
     // Contact
     contact_title: "Contact me",
     contact_name_placeholder: "Name",
@@ -232,6 +239,13 @@ const translations = {
     skills_soft_4: "Adaptabilidade",
     skills_soft_5: "Aprendizado Contínuo",
     skills_soft_6: "Resolução de Problemas",
+
+    // Projects
+    projects_title: "Projetos",
+    projects_game_title: "Jogo da Velha",
+    projects_game_desc:
+      "Um clássico jogo da velha construído com HTML, CSS e JavaScript puros. Focado em design responsivo, animações fluidas em CSS (como um indicador de turno com temporizador) e manipulação do DOM para uma experiência de usuário limpa e moderna.",
+
     // Contact
     contact_title: "Contato",
     contact_name_placeholder: "Nome",

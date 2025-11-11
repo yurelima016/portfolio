@@ -109,7 +109,6 @@ body[data-theme="light"] {
   transition: color 0.3s ease;
 }
 
-/* Efeito hover mantido */
 .header__nav-item-link::after {
   content: "";
   width: 0;
@@ -128,7 +127,6 @@ body[data-theme="light"] {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  /* Removemos width fixo */
 }
 
 .header__control-btn {
@@ -392,17 +390,10 @@ body[data-theme="light"] {
   width: 100%;
 }
 
-/* .skills__group--soft {
-  width: 100%;
-  height: 30%;
-} */
-
-/* Localize e ajuste esta regra (fora do media query) */
 .skills__group--soft {
   width: 100%;
-  /* height: 30%;  <-- REMOVA ESTA LINHA FIXA */
-  min-height: 30%; /* Use min-height para permitir crescimento se necessário */
-  flex-grow: 1; /* Permite ocupar espaço disponível */
+  min-height: 30%;
+  flex-grow: 1;
 }
 
 .skills__soft-grid {
@@ -516,7 +507,51 @@ body[data-theme="light"] {
 .projects {
   width: 100vw;
   height: auto;
+  padding: 3rem 0;
+}
+
+.projects__title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f0f0f0;
+  margin-bottom: 2rem;
+}
+
+.projects__container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+}
+
+.projects__image-wrapper {
+  flex-basis: 45%;
+  height: 300px;
+  background-color: #3a4a4f;
+  border-radius: 4px;
+}
+
+.projects__description-wrapper {
+  flex-basis: 55%;
+  padding: 0 0 0 2.5rem;
+}
+
+.projects__description-wrapper h3 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  color: #e67e22;
+}
+
+.projects__description-wrapper p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e67e22;
 }
 
 /* --- Contact --- */
@@ -772,7 +807,7 @@ body,
   transition: fill 0.3s ease;
 }
 
-/* MEDIA QUERY */
+/* --- Media Query --- */
 
 @media (max-width: 1200px) {
   .about {
@@ -1079,7 +1114,25 @@ body,
     padding: 0.5rem calc(var(--s) + 0.5rem);
   }
 
-  /* Projects */
+  /* --- Projects --- */
+  .projects__container {
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .projects__image-wrapper {
+    flex-basis: auto;
+    width: 100%;
+    height: 220px;
+    border-radius: 0;
+  }
+
+  .projects__description-wrapper {
+    flex-basis: auto;
+    width: 100%;
+    padding: 1.5rem;
+  }
 
   /* --- Contact Me --- */
   .contact {
