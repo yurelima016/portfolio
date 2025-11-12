@@ -210,6 +210,7 @@ const translations = {
     projects_game_title: "Tic Tac Toe",
     projects_game_desc:
       "A classic Tic-Tac-Toe game built with pure HTML, CSS, and JavaScript. Focused on responsive design, fluid CSS animations (such as a turn indicator with timing), and DOM manipulation for a clean and modern user experience.",
+    projects_redirect: "View Project",
 
     // Contact
     contact_title: "Contact me",
@@ -255,6 +256,7 @@ const translations = {
     contact_message_placeholder: "Mensagem",
     contact_send_btn: "Enviar",
     footer_rights: "Todos os direitos reservados.",
+    projects_redirect: "Ver Projeto",
   },
 };
 
