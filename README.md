@@ -36,6 +36,8 @@ Este projeto foi construído utilizando as principais tecnologias e padrões do 
   - **`navigator.language`:** Para detectar o idioma padrão do navegador do usuário.
   - **`data-attributes`:** Utilizados para vincular o DOM ao JavaScript de forma limpa (ex: `data-translate` e `data-skill`).
 - **Formspree:** Para o envio de formulários de contato sem a necessidade de um back-end.
+- **Vercel:** Para deploy e configuração de infraestrutura:
+  - **`vercel.json`:** Configuração de `rewrites` (proxy reverso) para integrar outros projetos (como o Jogo da Velha) sob o mesmo domínio.
 
 ---
 
@@ -65,7 +67,7 @@ O site já conta com as seguintes seções interativas e funcionais:
 
 ### 4. Seção "Skills" Interativa
 
-- **Animação Automática:** Carrossel que percorre as _Hard Skills_ com barras de progresso.
+- **Animação Automática:** Carrossel que percorre as _Hard Skills_ com barras de progresso (7s).
 - **Conteúdo Dinâmico:** Atualização em tempo real de logos, títulos e nível de habilidade (estrelas).
 - **Interação do Usuário:** Clique para selecionar e visualizar detalhes de uma skill específica imediatamente.
 
@@ -78,13 +80,18 @@ O site já conta com as seguintes seções interativas e funcionais:
 
 - **Idade Dinâmica:** Cálculo automático da idade com base na data de nascimento.
 
+### 7. Seção "Projects" com Proxy Reverso
+
+- **Estrutura Implementada:** A seção `#projects` está construída e exibindo o primeiro projeto.
+- **Integração via Vercel:** Utiliza um **proxy reverso** (`rewrites` no `vercel.json`) para carregar o "Jogo da Velha" (hospedado em outro deploy) dentro do domínio principal (`yure.dev.br/jogo-da-velha/`), criando uma experiência de usuário unificada e profissional.
+
 ---
 
 ## 🚧 Próximos Passos (Roadmap)
 
 Este projeto continua evoluindo! As próximas funcionalidades planejadas são:
 
-- **[ ] Seção de Projetos:** Implementação de uma galeria ou carrossel na seção `#projects` para exibir trabalhos realizados.
+- **[ ] Expandir Seção de Projetos:** Adicionar mais projetos.
 - **[ ] Melhorias de Acessibilidade (a11y):** Refinamento da navegação por teclado e leitores de tela.
 - **[ ] Testes de Performance:** Otimização do carregamento de imagens e scripts.
 
@@ -102,4 +109,4 @@ Este projeto continua evoluindo! As próximas funcionalidades planejadas são:
    cd portfolio
    ```
 
-3. Abra o arquivo index.html diretamente no seu navegador de preferência.
+3. Abra o arquivo `index.html` diretamente no seu navegador de preferência.
