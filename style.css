@@ -536,20 +536,24 @@ body[data-theme="light"] {
   gap: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 2rem;
-  background-color: var(--color-gray-500);
+  background-color: var(--color-dark-200);
   border-radius: 4px;
 }
 
 .projects__image-wrapper {
   flex-basis: 35%;
-  height: 300px;
-  background-color: var(--color-gray-100);
+  border-radius: 6px;
+}
+
+.projects__image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 6px;
 }
 
 .projects__description-wrapper {
   flex-basis: 50%;
-  height: 300px;
   padding: 0 0 0 2.5rem;
 }
 
@@ -557,16 +561,32 @@ body[data-theme="light"] {
   font-family: var(--font-title);
   margin-top: 0;
   font-size: 5vh;
-  color: #e67e22;
   margin-bottom: 1vh;
+  color: var(--color-white);
+  text-shadow: 2px 2px 0 var(--color-black);
 }
 
 .projects__description-wrapper p {
   font-family: var(--font-text);
-  font-size: 2.75vh;
+  font-size: 2.5vh;
   text-align: justify;
   line-height: 1.6;
-  color: #e67e22;
+  color: var(--color-gray-100);
+}
+
+.projects__button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 40%;
+  padding: 1vh 1.5vh;
+  margin-top: 3vh;
+  font-family: var(--font-title);
+  font-size: 2.5vh;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 8px;
+  letter-spacing: 2px;
 }
 
 /* --- Contact --- */
@@ -1154,7 +1174,6 @@ body,
   .projects__image-wrapper {
     flex-basis: auto;
     width: 98%;
-    height: 230px;
   }
 
   .projects__description-wrapper {
@@ -1163,6 +1182,14 @@ body,
     height: auto;
     padding: 1.5rem;
     text-align: center;
+  }
+
+  .projects__description-wrapper p {
+    font-size: 2vh;
+  }
+
+  .projects__button {
+    width: 80%;
   }
 
   /* --- Contact Me --- */
