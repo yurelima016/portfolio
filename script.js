@@ -188,6 +188,7 @@ const translations = {
     nav_home: "Home",
     nav_about: "About Me",
     nav_skills: "Skills",
+    nav_projects: "Projects",
     nav_contact: "Contacts",
     // About me
     about_title: "About me",
@@ -223,6 +224,7 @@ const translations = {
     nav_home: "Início",
     nav_about: "Sobre Mim",
     nav_skills: "Habilidades",
+    nav_projects: "Projetos",
     nav_contact: "Contatos",
     // About me
     about_title: "Sobre mim",
